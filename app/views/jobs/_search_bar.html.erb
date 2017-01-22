@@ -1,0 +1,22 @@
+
+<div class="searchPart">
+  <form>
+    <div class="home"></div>
+
+<div class="row">
+  <div class="col-sm-9 col-lg-8 col-lg-offset-2">
+    <%= form_tag search_jobs_path, :method => :get, :class => "jobs-search-form" do %>
+      <div class="searchKey">
+        <input type="text"  name="q" value="<%= params[:q] %>" placeholder="搜索公司，职位或地名...">
+
+
+          <button>搜索</button>
+
+      </div>
+    <% end %>
+  </div>
+</div>
+
+  </form>
+  <div class="slogin">优秀的互联网人都在这里</div>
+</div>

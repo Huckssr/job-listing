@@ -19,3 +19,229 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
+
+ body{
+     background: url(/assets/background.jpg) repeat;
+     font-size: 14px;
+     color: #FFF;
+ }
+
+
+// navbar
+ .section{
+     width: 1000px;
+     margin: auto;
+ }
+
+
+ header{
+     height: 220px;
+ }
+ .logo{
+     float: left;
+     height: 220px;
+     position: relative;
+ }
+ .user{
+     float: right;
+     position: relative;
+     height: 220px;
+ }
+ .user:after{
+     content: "";
+     display: block;
+     width: 500px;
+     height: 500px;
+     background: #541a28;
+     border-radius: 50%;
+     position: absolute;
+     top: -369px;
+     right: -105px;
+ }
+ .user .state{
+     position: absolute;
+     z-index: 2;
+     width: 400px;
+     right: 0;
+     top: 40px;
+     text-align: right;
+ }
+
+ .user .state a{
+     color: #95989A;
+     margin-left: 20px;
+ }
+// #navbar
+
+ h1{
+     font-size: 26px;
+     color: #fff;
+     margin-top: 20px;
+
+ }
+ h1 span{
+     font-size: 14px;
+     color: #95989A;
+     margin-left: 20px;
+ }
+
+
+.title{
+    width: 1000px;
+    margin: auto;
+    margin-top: -20px;
+}
+
+.title h1{
+    font-size: 26px;
+    color: #fff;
+    margin-top: 20px;
+    text-align:center
+}
+.title span{
+    font-size: 14px;
+    color: #95989A;
+    margin-left: 20px;
+    text-align:center
+}
+
+
+ .des{
+     background: #FFF;
+     width: 100%;
+     margin: auto;
+     border-radius: 10px;
+     color: #333;
+     text-align:left
+
+ }
+ .des .list{
+     padding: 20px 20px 20px 25%;
+ }
+
+ .desnew{
+     background: #FFF;
+     width: 50%;
+     margin: auto;
+     border-radius: 10px;
+     color: #333;
+     text-align:center
+ }
+ .desnew .list{
+     padding: 20px 20px 0;
+ }
+
+// 搜索
+ .searchPart{
+     text-align: center;
+     width: 100%;
+     margin-top: -100px;
+ }
+ .searchPart .home{
+     background: url(/assets/home.jpg);
+     background-size: 100% 100%;
+     width: 80px;
+     height: 100px;
+     margin: auto;
+ }
+ .searchKey{
+     border:1px solid #1e3560;
+     background: #101a3c;
+     width: 100%;
+     margin: auto;
+     height: 45px;
+     border-radius: 120px;
+     position: relative;
+     margin-top: 30px;
+ }
+ .searchKey input{
+     background: rgba(16,26,60,.6);
+     color: #FFF;
+     width: 96%;
+     font-size: 16px;
+     margin: auto;
+     line-height: 45px;
+ }
+ .searchKey button{
+     position: absolute;
+     right: 0px;
+     top: 0;
+     height: 45px;
+     width: 120px;
+     border-radius: 120px;
+     background: #31619a;
+     color: #FFF;
+     font-size: 18px;
+     text-align: center;
+     letter-spacing: 5px;
+     border: 0 none;
+ }
+ .slogin{
+     font-size: 16px;
+     margin-top: 30px;
+ }
+
+ .screenPart{
+     background: #FFF;
+     width: 100%;
+     margin: auto;
+     border-radius: 10px;
+     margin-top: 60px;
+     color: #333;
+ }
+ .screenPart .list{
+     padding: 20px 20px 0;
+ }
+// #搜索
+
+
+// footer
+ .end{
+     float: left;
+ }
+ .end p{
+     color: #95989A;
+     margin-top: 10px;
+ }
+ .end p:first-child{
+     color: #fff;
+     font-size: 28px;
+ }
+ .end p:last-child{
+     margin-top: 80px;
+ }
+ .other{
+     float: right;
+     width: 420px;
+ }
+ .links a{
+     color: #95989A;
+     margin-right: 15px;
+     margin-top: 10px;
+ }
+ h3{
+     font-size: 18px;
+     color: #95989A;
+     line-height: 40px;
+ }
+
+ .contact{
+     margin-top: 20px;
+     color: #95989A;
+ }
+// #footer
+
+
+.operation{
+    position: absolute;
+    bottom: 15px;
+    right: 30px;
+    width: 500px;
+    text-align: right;
+}
+.operation a{
+    background: #69a7f2;
+    color: #FFF;
+    padding: 8px 16px;
+    border-radius: 5px;
+}

@@ -1,7 +1,27 @@
-<h1> <%= @job.title %> </h1>
-<p>
-<%= simple_format(@job.description) %>
-</p>
-<div class="text-center">
-  <%= link_to("提交简历", new_job_resume_path(@job), :style => "font-size: 30px; text-decoration:underline;") %>
+<div class="title">
+<h1> <%= @job.title %></h1>
+<span>
+  <p>
+    薪资范围： ¥	<%= @job.wage_lower_bound %> - <%= @job.wage_upper_bound %>
+  </p>
+  <p>
+    发布时间： <%= local_time(@job.created_at, '%Y %b %e, %l:%M%p') %>
+  </p>
+</span>
+</div>
+<div class="section">
+<div class="des">
+  <div class="list">
+    <p>
+    <%= simple_format(@job.description) %>
+    </p>
+  </div>
+  <div style="margin-top: 20px;">&nbsp
+  </div>
+</div>
+</div>
+<div style="margin-top: 20px;">&nbsp
+</div>
+<div class="text-center send-resume">
+<%= link_to("提交简历", new_job_resume_path(@job), :class => "btn btn-primary btn-lg") %>
 </div>

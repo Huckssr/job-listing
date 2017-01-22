@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+
+
+
   <head>
     <title>JobListing</title>
     <%= csrf_meta_tags %>
@@ -9,11 +12,15 @@
   </head>
 
   <body>
-    <div class="container-fluid">
-      <%= render "common/navbar" %>
-      <%= render "common/flashes" %>
-      <%= yield %>
-    </div>
-      <%= render "common/footer" %>
+      <div class="container-fluid">
+        <%= render "common/navbar" %>
+        <% #= render "common/flashes" %> 
+        <%= yield %>
+      </div>
+        <%= render "common/footer" %>
+
   </body>
+
+
 </html>
+<!-- style="background-image:url('http://i1.piimg.com/1949/fa087df8512a40d3.png');" -->

@@ -1,50 +1,73 @@
-<div class="pull-right">
-  <%= link_to("Add a job", new_job_path, :class => "btn btn-default" ) %>
-</div>
 
-<div class="dropdown clearfix pull-right">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-    排序
-    <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-    <li>
-      <%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound")) %>
-    </li>
-    <li>
-      <%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound")) %>
-    </li>
-    <li>
-      <%= link_to("按照发表时间排序", jobs_path ) %>
-    </li>
-  </ul>
-</div>
+
+<div class="home">
+	<div class="section">
+		<%= render :partial => "jobs/search_bar" %>
+		<div class="screenPart">
+			<div class="list">
+
+					<ul id="myTab" class="nav nav-tabs" role="tablist">
+				    <li class="active">
+				      <a data-toggle="tab" href="#category-0">全栈工程师</a>
+				    </li>
+				    <li class="">
+				      <a data-toggle="tab" href="#category-1">前端开发</a>
+				    </li>
+				    <li class="">
+				      <a data-toggle="tab" href="#category-3">架构师</a>
+				    </li>
+				    <li class="">
+				      <a data-toggle="tab" href="#category-4">Ruby</a>
+				    </li>
+				    <li class="">
+				      <a data-toggle="tab" href="#category-5">Jave</a>
+				    </li>
+				    <li class="">
+				      <a data-toggle="tab" href="#category-7">PHP</a>
+				    </li>
+						<li class="">
+				      <a data-toggle="tab" href="#category-7">技术总监</a>
+				    </li>
+						<li class="">
+				      <a data-toggle="tab" href="#category-7">CTO</a>
+				    </li>
+				  </ul>
+
+
+
+  	<div class="btn-group pull-right" role="group" aria-label="...">
+      <%= link_to("综合排序", jobs_path(:order => "by_lower_bound"), :class => "btn btn-default", :data => {:toggle => "button"}) %>
+      <%= link_to("薪资排序", jobs_path(:order => "by_upper_bound"), :class => "btn btn-default") %>
+      <%= link_to("最新排序", jobs_path, :class => "btn btn-default") %>
+    </div>
 
 <table class="table table-boldered">
   <thead>
     <tr>
-      <td>职缺</td>
-      <td>薪资下限</td>
-      <td>薪资上限</td>
-      <td>刊登时间</td>
+      <td>职位名称</td>
+      <td>薪资范围</td>
+      <td>发布时间</td>
     </tr>
   </thead>
     <tbody>
       <% @jobs.each do |job| %>
       <tr>
         <td>
-          <%= link_to(job.title, job_path(job)) %>
+          <%= link_to(job.title, job_path(job), :target => "_blank") %>
         </td>
         <td>
-          <%= job.wage_lower_bound %>
+					¥	<%= job.wage_lower_bound%> - <%= job.wage_upper_bound%>
         </td>
         <td>
-          <%= job.wage_upper_bound %>
-        </td>
-        <td>
-          <%= job.created_at %>
+          <%= local_time(job.created_at, '%Y %b %e, %l:%M%p') %>
         </td>
       </tr>
     <% end %>
-  </tbody>
+
 </table>
+</tbody>
+<div style="margin-top: 50px;">&nbsp
+</div>
+			</div>
+		</div>
+	</div>

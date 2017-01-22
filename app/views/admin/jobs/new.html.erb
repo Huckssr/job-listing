@@ -1,10 +1,21 @@
-<h1> Add a job </h1>
+<div class="title">
+<h1> 发布招聘 </h1>
+</div>
+<div style="margin-top: 10px;">&nbsp
+</div>
+<div class="section">
+  <div class="desnew">
+    <div style="margin-top: 10px;">&nbsp
+    </div>
   <%= simple_form_for [:admin,@job] do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
+  <%= f.input :title, :label => "职位名称" %>
+  <%= f.input :description, :label => "职位描述" %>
   <%= f.input :wage_lower_bound, :label => "薪资下限" %>
   <%= f.input :wage_upper_bound, :label => "薪资上限" %>
-  <%= f.input :contact_email %>
-  <%= f.input :is_hidden %>
-  <%= f.submit "Submit" %>
+  <%= f.input :is_hidden, :label => "隐藏"%>
+  <%= f.submit "提交" %>
 <% end %>
+<div style="margin-top: 10px;">&nbsp
+</div>
+</div>
+</div>
